@@ -1,0 +1,69 @@
+﻿@model Tema2PS.Models.Spectacle
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Spectacle</legend>
+
+        @Html.HiddenFor(model => model.SpectacleId)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Titlu)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Titlu)
+            @Html.ValidationMessageFor(model => model.Titlu)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Regia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Regia)
+            @Html.ValidationMessageFor(model => model.Regia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Distributia)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Distributia)
+            @Html.ValidationMessageFor(model => model.Distributia)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Premiera)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Premiera)
+            @Html.ValidationMessageFor(model => model.Premiera)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Bilete)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Bilete)
+            @Html.ValidationMessageFor(model => model.Bilete)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

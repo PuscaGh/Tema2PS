@@ -1,0 +1,50 @@
+﻿@model Tema2PS.Models.Spectacle
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Spectacle</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Titlu)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titlu)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Regia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Regia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Distributia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Distributia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Premiera)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Premiera)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bilete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bilete)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SpectacleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

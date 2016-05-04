@@ -1,0 +1,53 @@
+﻿@model Tema2PS.Models.Spectacle
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Spectacle</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Titlu)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Titlu)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Regia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Regia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Distributia)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Distributia)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Premiera)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Premiera)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bilete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bilete)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
